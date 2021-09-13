@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     CircularArray<int>* array = new CircularArray<int>(7);
     ASSERT(array->is_empty() == true, "The function is_empty is not working");
-    array->push_back(6);
+    /*array->push_back(6);
     array->push_back(3);
     array->push_back(7);
     array->push_back(8);
@@ -27,6 +27,6 @@ int main() {
     ASSERT(array->to_string() == "2 3 4 7 8 10 15 ", "The function sort is not working");
     array->reverse();
     ASSERT(array->to_string() == "15 10 8 7 4 3 2 ", "The function reverse is not working");   
-    delete array;
+    delete array;*/
     return 0;
 }

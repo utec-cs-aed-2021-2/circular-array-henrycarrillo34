@@ -13,14 +13,14 @@ public:
     CircularArray();
     CircularArray(int _capacity);
     virtual ~CircularArray();
-    void push_front(T data);
-    void push_back(T data);
+    void push_front(T data);  //
+    void push_back(T data);   
     void insert(T data, int pos);
     T pop_front();
     T pop_back();
-    bool is_full();
-    bool is_empty();
-    int size();
+    bool is_full();    
+    bool is_empty();  //realizado
+    int size() ;     
     void clear();
     T &operator[](int);
     void sort();
@@ -72,4 +72,14 @@ string CircularArray<T>::to_string(string sep)
     for (int i = 0; i < size(); i++)
         result += std::to_string((*this)[i]) + sep;
     return result;    
+}
+
+template <class T>
+bool CircularArray<T>::is_empty()
+{
+    if (back == front)
+    {
+        return true;
+    }
+    return false;
 }
