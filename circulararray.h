@@ -183,7 +183,9 @@ void CircularArray<T>::sort()
 
 template <class T>
 bool CircularArray<T>::is_sorted()
-{}
+{
+    
+}
 
 template <class T>
 void CircularArray<T>::reverse()
