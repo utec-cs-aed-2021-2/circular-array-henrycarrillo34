@@ -65,15 +65,6 @@ int CircularArray<T>::next(int index)
     return (index + 1) % capacity;
 }
 
-template <class T>
-string CircularArray<T>::to_string(string sep)
-{
-    string result = ""; 
-    for (int i = 0; i < size(); i++)
-        result += std::to_string((*this)[i]) + sep;
-    return result;    
-}
-
 
 template <class T>
 void CircularArray<T>::push_front(T data)
@@ -189,8 +180,8 @@ void CircularArray<T>::reverse()
 template <class T>
 string CircularArray<T>::to_string(string sep)
 {
-    string result = "";
-    for (int i = 0; i < size(); i++)
+    string result = ""; 
+    for(int i = 0; i < size(); i++)
         result += std::to_string((*this)[i]) + sep;
-    return result;
+    return result;    
 }
