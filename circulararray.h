@@ -189,5 +189,8 @@ void CircularArray<T>::reverse()
 template <class T>
 string CircularArray<T>::to_string(string sep)
 {
-
+    string result = "";
+    for (int i = 0; i < size(); i++)
+        result += std::to_string((*this)[i]) + sep;
+    return result;
 }
