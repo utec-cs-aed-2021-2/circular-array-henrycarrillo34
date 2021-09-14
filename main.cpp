@@ -7,13 +7,13 @@ using namespace std;
 int main() {
     CircularArray<int>* array = new CircularArray<int>(7);
     ASSERT(array->is_empty() == true, "The function is_empty is not working");
-    /*array->push_back(6);
+    array->push_back(6);
     array->push_back(3);
     array->push_back(7);
     array->push_back(8);
     array->push_back(1);
     ASSERT(array->is_empty() == false, "The function is_empty is not working");
-    ASSERT(array->is_full() == false, "The function is_full is not working");
+    /*ASSERT(array->is_full() == false, "The function is_full is not working");
     array->pop_front();
     array->pop_back();
     array->push_front(10);

@@ -14,7 +14,7 @@ public:
     CircularArray(int _capacity);
     virtual ~CircularArray();
     void push_front(T data);  //
-    void push_back(T data);   
+    void push_back(T data);    //
     void insert(T data, int pos);
     T pop_front();
     T pop_back();
@@ -74,6 +74,52 @@ string CircularArray<T>::to_string(string sep)
     return result;    
 }
 
+
+template <class T>
+void CircularArray<T>::push_front(T data)
+{
+   
+}
+
+template <class T>
+void CircularArray<T>::push_back(T data)
+{
+    if(is_full()){
+        throw "Array is full";
+    }
+    if(is_empty()){
+        front = back = 0;
+        array[back] = data;
+    }
+    else{
+        array[next(back)] = data;
+        back = next(back);
+    }
+}
+
+template <class T>
+T CircularArray<T>::pop_front()
+{
+
+}
+
+template <class T>
+T CircularArray<T>::pop_back()
+{
+}
+
+template <class T>
+bool CircularArray<T>::is_full()
+{
+    if(back == capacity-1 && front == 0){
+        return true;
+    } else if (front == back-1 || back == front - 1){
+        return true;
+    } else {
+        return false;
+    }
+}
+
 template <class T>
 bool CircularArray<T>::is_empty()
 {
@@ -83,3 +129,50 @@ bool CircularArray<T>::is_empty()
     }
     return false;
 }
+
+template <class T>
+int CircularArray<T>::size()
+{
+    if (is_empty())
+    {
+        return 0;
+    }
+    if (front == back) 
+    {
+        return 1;
+    }
+    if (front > back) 
+    {
+        return (capacity - front) + (back + 1);
+    } else 
+    {
+        return back - front + 1;
+    }
+}
+
+template <class T>
+void CircularArray<T>::clear()
+{
+    front = back = -1;
+}
+
+template <class T>
+T &CircularArray<T>::operator[](int)
+{
+
+}
+
+template <class T>
+void CircularArray<T>::sort()
+{
+
+}
+
+template <class T>
+bool CircularArray<T>::is_sorted()
+{}
+
+template <class T>
+void CircularArray<T>::reverse()
+{}
+

@@ -8,7 +8,10 @@
     "__split_buffer": "cpp",
     "bitset": "cpp",
     "string_view": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "*.tcc": "c",
+    "memory_resource": "c",
+    "type_traits": "c"
   },
   "C_Cpp_Runner.cCompilerPath": "E:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
   "C_Cpp_Runner.cppCompilerPath": "E:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
