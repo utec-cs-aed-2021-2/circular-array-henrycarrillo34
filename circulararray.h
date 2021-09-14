@@ -111,7 +111,8 @@ T CircularArray<T>::pop_back()
 template <class T>
 bool CircularArray<T>::is_full()
 {
-    if(back == capacity-1 && front == 0){
+    if(back == capacity-1 && front == 0)
+    {
         return true;
     } else if (front == back-1 || back == front - 1){
         return true;
@@ -174,5 +175,19 @@ bool CircularArray<T>::is_sorted()
 
 template <class T>
 void CircularArray<T>::reverse()
-{}
+{
+    int par_array= size()%2;
+    if(par_array  == 0)
+    {
+        for (int i = 0; i < size()/2; ++i)
+        {
+            swap((*this)[i], (*this)[size()-1-i]);
+        }
+    }
+}
 
+template <class T>
+string CircularArray<T>::to_string(string sep)
+{
+
+}
