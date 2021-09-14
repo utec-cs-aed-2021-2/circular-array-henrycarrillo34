@@ -91,12 +91,33 @@ void CircularArray<T>::push_back(T data)
 template <class T>
 T CircularArray<T>::pop_front()
 {
-
+    if(front == back){
+        front = -1;
+        back = -1;
+    }
+    else if(front == capacity - 1)
+    {
+        front = 0;
+    }
+    else{
+        front += 1;
+    }
 }
 
 template <class T>
 T CircularArray<T>::pop_back()
 {
+    if (front == back){
+        front = -1;
+        back = -1;
+    }
+    else if (back == 0)
+    {
+        back = capacity - 1;
+    }
+    else{
+        back -= 1;
+    }
 }
 
 template <class T>
